@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap');
+
+:root{
+  --ink:#faf3e6;
+  --charcoal:#ffffff;
+  --charcoal-2:#fdf8ef;
+  --ember:#7a1f2b;
+  --ember-deep:#5c1620;
+  --ember-bright:#93283a;
+  --bone:#231a14;
+  --bone-dim:#7a6c5d;
+  --gold:#c9a13b;
+  --on-accent:#fdf6ec;
+  --line:rgba(35,26,20,0.12);
+  --radius:4px;
+  --font-display:'Playfair Display', serif;
+  --font-head:'Playfair Display', serif;
+  --font-body:'Inter', sans-serif;
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background-color:var(--ink);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170' viewBox='0 0 170 170'%3E%3Cpath d='M85 34c-9 17-26 24-26 45a26 26 0 0 0 52 0c0-9-4-13-4-13s0 9-6 9c2-9-2-15-2-22 0 0-7 9-7 17-13-9-11-26-7-36z' fill='none' stroke='%237a1f2b' stroke-width='2' opacity='0.055'/%3E%3Ccircle cx='140' cy='35' r='4' fill='%23c9a13b' opacity='0.09'/%3E%3Ccircle cx='24' cy='128' r='3.2' fill='%237a1f2b' opacity='0.07'/%3E%3Cline x1='108' y1='128' x2='146' y2='146' stroke='%237a6c5d' stroke-width='2' opacity='0.06'/%3E%3Cline x1='16' y1='40' x2='46' y2='26' stroke='%237a6c5d' stroke-width='2' opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat:repeat;
+  background-attachment:fixed;
+  color:var(--bone);
+  font-family:var(--font-body);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.display{font-family:var(--font-head); font-weight:700; line-height:1.1; margin:0;}
+.display-xl{font-family:var(--font-display); font-weight:900; line-height:1.02;}
+.accent-italic{font-family:var(--font-display); font-style:italic; font-weight:600; color:var(--ember);}
+.urdu{font-family:'Noto Nastaliq Urdu', serif; direction:rtl; font-weight:600;}
+a{color:inherit;}
+img,svg{max-width:100%; display:block;}
+button{font-family:inherit;}
+
+.stars{color:var(--gold); font-size:0.85rem; letter-spacing:1px; white-space:nowrap;}
+.stars .muted{color:var(--line);}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+}

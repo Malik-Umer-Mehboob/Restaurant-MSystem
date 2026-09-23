@@ -1,0 +1,90 @@
+<main class="menu-section">
+  <div class="menu-head">
+  <h2>Our menu</h2>
+  <p>Everything is cooked fresh to order. Search for a dish, or pick a category below.</p>
+  <div class="search-wrap">
+    <input
+      type="text"
+      placeholder="Search dishes… e.g. Biryani, Karahi, Zinger"
+      [ngModel]="searchTerm()"
+      (ngModelChange)="onSearch($event)">
+    @if (searchTerm()) {
+      <button class="clear" (click)="onSearch('')" aria-label="Clear search">×</button>
+    }
+  </div>
+</div>
+  @if (loading()) {
+    <p class="state">Loading menu…</p>
+  } @else if (error()) {
+    <p class="state error">{{ error() }}</p>
+  } @else {
+    @if (!searchTerm()) {
+      <div class="tabs-wrap">
+        <div class="tabs">
+          <button class="tab" [class.active]="activeTab()==='hot'" (click)="setTab('hot')">Hot Selling</button>
+          <button class="tab" [class.active]="activeTab()==='all'" (click)="setTab('all')">All items</button>
+          @for (cat of categories(); track cat) {
+            <button class="tab" [class.active]="activeTab()===cat" (click)="setTab(cat)">{{ cat }}</button>
+          }
+        </div>
+      </div>
+    }
+
+    @if (searchTerm() && visibleItems().length === 0) {
+      <p class="state">No dishes match "{{ searchTerm() }}".</p>
+    }
+
+    @for (group of groupedVisible(); track group.category) {
+      <div class="cat-title">
+        <h3>{{ group.category }}</h3>
+        <span class="count">{{ group.items.length }} items</span>
+      </div>
+      <div class="grid">
+        @for (item of group.items; track item._id) {
+          <div class="card">
+            <div class="card-top">
+              <div class="card-id">
+                @if (item.image) {
+                  <img class="thumb" [src]="item.image" [alt]="item.name">
+                } @else {
+                  <span class="icon-circle">{{ categoryIcon(item.category) }}</span>
+                }
+                <div>
+                  <div class="card-name">{{ item.name }}</div>
+                  <div class="card-urdu urdu">{{ item.urdu }}</div>
+                </div>
+              </div>
+              <div class="badges">
+                @if (item.tags?.includes('hot')) { <span class="badge hot">Hot Selling</span> }
+                @if (item.tags?.includes('spicy')) { <span class="badge spicy">Spicy</span> }
+              </div>
+            </div>
+            <div class="card-desc">{{ item.description }}</div>
+
+            <button class="rating-row" (click)="openReviews(item)">
+              <app-star-rating [value]="ratingFor(item).avg" [count]="ratingFor(item).count"></app-star-rating>
+              <span class="rate-link">{{ ratingFor(item).count ? 'See / add review' : 'Be the first to rate' }}</span>
+            </button>
+
+            <div class="card-bottom">
+              <div class="price">Rs. {{ item.price | number }} <small>onwards</small></div>
+              @if (qty(item) === 0) {
+                <button class="add-btn" (click)="cart.add(item)">Add</button>
+              } @else {
+                <div class="qty-add">
+                  <button (click)="cart.decrease(item._id!)">−</button>
+                  <span>{{ qty(item) }}</span>
+                  <button (click)="cart.add(item)">+</button>
+                </div>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    }
+  }
+</main>
+
+@if (reviewItem(); as ri) {
+  <app-review-modal [item]="ri" (close)="closeReviews()" (submitted)="loadRatings()"></app-review-modal>
+}

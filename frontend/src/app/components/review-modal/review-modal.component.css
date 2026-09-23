@@ -1,0 +1,32 @@
+.overlay{position:fixed; inset:0; background:rgba(10,6,6,0.6); z-index:59;}
+.modal{
+  position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+  background:var(--charcoal); border:1px solid var(--line); border-radius:6px;
+  width:min(460px, 92vw); max-height:85vh; overflow-y:auto; z-index:60;
+  padding:24px;
+}
+.head{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px;}
+.head h3{color:var(--bone); font-size:1.15rem;}
+.head .urdu{color:var(--bone-dim); margin-top:2px;}
+.x{background:none; border:none; color:var(--bone); font-size:1.4rem; cursor:pointer; line-height:1;}
+
+.existing{border-bottom:1px solid var(--line); padding-bottom:14px; margin-bottom:16px; max-height:220px; overflow-y:auto;}
+.muted{color:var(--bone-dim); font-size:0.88rem;}
+.review-row{padding:10px 0; border-bottom:1px solid var(--line);}
+.review-row:last-child{border-bottom:none;}
+.review-top{display:flex; justify-content:space-between; align-items:center;}
+.name{font-weight:600; color:var(--bone); font-size:0.9rem;}
+.comment{color:var(--bone-dim); font-size:0.86rem; margin-top:4px;}
+
+.form h4{color:var(--bone); font-size:0.95rem; margin-bottom:10px;}
+.form input, .form textarea{
+  width:100%; background:var(--ink); border:1px solid var(--line); color:var(--bone);
+  padding:10px 12px; border-radius:4px; font-size:0.9rem; font-family:inherit; margin-top:10px;
+}
+.error{color:var(--ember-bright); font-size:0.85rem; margin-top:8px;}
+.submit{
+  margin-top:12px; width:100%; background:var(--ember); color:var(--bone); border:none;
+  padding:12px; border-radius:4px; font-weight:600; cursor:pointer;
+}
+.submit:hover{background:var(--ember-bright);}
+.submit:disabled{opacity:0.6;}

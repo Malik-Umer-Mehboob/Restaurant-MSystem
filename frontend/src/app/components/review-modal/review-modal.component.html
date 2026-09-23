@@ -1,0 +1,37 @@
+<div class="overlay" (click)="close.emit()"></div>
+<div class="modal">
+  <div class="head">
+    <div>
+      <h3>{{ item.name }}</h3>
+      <div class="urdu">{{ item.urdu }}</div>
+    </div>
+    <button class="x" (click)="close.emit()" aria-label="Close">×</button>
+  </div>
+
+  <div class="existing">
+    @if (loading()) {
+      <p class="muted">Loading reviews…</p>
+    } @else if (reviews().length === 0) {
+      <p class="muted">No reviews yet — be the first to rate this dish.</p>
+    } @else {
+      @for (r of reviews(); track r._id) {
+        <div class="review-row">
+          <div class="review-top">
+            <span class="name">{{ r.name }}</span>
+            <app-star-rating [value]="r.rating" [showCount]="false"></app-star-rating>
+          </div>
+          @if (r.comment) { <p class="comment">{{ r.comment }}</p> }
+        </div>
+      }
+    }
+  </div>
+
+  <div class="form">
+    <h4>Add your review</h4>
+    <app-star-rating [value]="rating" [interactive]="true" [showCount]="false" (valueChange)="rating = $event"></app-star-rating>
+    <input type="text" placeholder="Your name (optional)" [(ngModel)]="name">
+    <textarea rows="2" placeholder="What did you think? (optional)" [(ngModel)]="comment"></textarea>
+    @if (error()) { <p class="error">{{ error() }}</p> }
+    <button class="submit" [disabled]="submitting()" (click)="submit()">{{ submitting() ? 'Submitting…' : 'Submit review' }}</button>
+  </div>
+</div>

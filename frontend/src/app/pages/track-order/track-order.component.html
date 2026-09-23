@@ -1,0 +1,39 @@
+<main class="wrap">
+  <h2>Track your order</h2>
+  <p class="sub">Enter the phone number you used at checkout to see your order status.</p>
+
+  <div class="search-row">
+    <input type="tel" placeholder="e.g. 03XX-XXXXXXX" [(ngModel)]="phone" (keyup.enter)="search()">
+    <button (click)="search()">Track</button>
+  </div>
+
+  @if (loading()) {
+    <p class="state">Searching…</p>
+  } @else if (searched() && orders()?.length === 0) {
+    <p class="state">No orders found for this number.</p>
+  } @else if (orders()) {
+    <div class="orders">
+      @for (order of orders(); track order._id) {
+        <div class="order-card">
+          <div class="order-head">
+            <span class="date">{{ order.createdAt | date:'medium' }}</span>
+            <span class="status" [class]="order.status">{{ statusLabels[order.status] || order.status }}</span>
+          </div>
+
+          @if (order.status !== 'cancelled') {
+            <div class="progress">
+              <div class="bar" [style.width.%]="progressPercent(order.status)"></div>
+            </div>
+          }
+
+          <ul class="items">
+            @for (line of order.items; track line.name) {
+              <li>{{ line.name }} × {{ line.qty }} <span>Rs. {{ line.price * line.qty | number }}</span></li>
+            }
+          </ul>
+          <div class="total">Total: Rs. {{ order.total | number }}</div>
+        </div>
+      }
+    </div>
+  }
+</main>

@@ -1,0 +1,79 @@
+<app-admin-nav></app-admin-nav>
+<div class="admin">
+  <div class="admin-head">
+    <h2>Menu admin</h2>
+    <div class="actions">
+      <button class="btn outline" (click)="openAddForm()">+ Add item</button>
+    </div>
+  </div>
+
+  @if (message()) { <p class="msg">{{ message() }}</p> }
+
+  @if (loading()) {
+    <p class="state">Loading…</p>
+  } @else {
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>Name</th><th>Category</th><th>Price</th><th>Tags</th><th></th></tr>
+        </thead>
+        <tbody>
+          @for (item of items(); track item._id) {
+            <tr>
+              <td>
+                @if (item.image) { <img [src]="item.image" class="thumb"> } @else { <span class="thumb placeholder">🍽️</span> }
+              </td>
+              <td>
+                <div class="n">{{ item.name }}</div>
+                <div class="u urdu">{{ item.urdu }}</div>
+              </td>
+              <td>{{ item.category }}</td>
+              <td>Rs. {{ item.price | number }}</td>
+              <td>{{ item.tags?.join(', ') || '—' }}</td>
+              <td class="row-actions">
+                <button class="link" (click)="openEditForm(item)">Edit</button>
+                <button class="link danger" (click)="remove(item)">Delete</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+
+  @if (formOpen()) {
+    <div class="overlay" (click)="closeForm()"></div>
+    <div class="modal">
+      <h3>{{ editingId() ? 'Edit item' : 'Add new item' }}</h3>
+
+      <label>Name (English)</label>
+      <input type="text" [(ngModel)]="form.name">
+
+      <label>Name (Urdu)</label>
+      <input type="text" class="urdu" dir="rtl" [(ngModel)]="form.urdu">
+
+      <label>Category</label>
+      <input type="text" [(ngModel)]="form.category" placeholder="e.g. BBQ, Karahi, Fast Food">
+
+      <label>Description</label>
+      <textarea rows="2" [(ngModel)]="form.description"></textarea>
+
+      <label>Price (Rs.)</label>
+      <input type="number" [(ngModel)]="form.price">
+
+      <label class="checkbox"><input type="checkbox" [(ngModel)]="hotChecked"> Hot Selling</label>
+      <label class="checkbox"><input type="checkbox" [(ngModel)]="spicyChecked"> Spicy</label>
+
+      <label>Photo (optional)</label>
+      <input type="file" accept="image/*" (change)="onFileSelected($event)">
+      @if (form.image && !selectedFile) {
+        <img [src]="form.image" class="preview">
+      }
+
+      <div class="modal-actions">
+        <button class="btn ghost" (click)="closeForm()">Cancel</button>
+        <button class="btn primary" [disabled]="saving()" (click)="save()">{{ saving() ? 'Saving…' : 'Save' }}</button>
+      </div>
+    </div>
+  }
+</div>

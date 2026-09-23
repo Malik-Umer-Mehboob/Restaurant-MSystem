@@ -1,0 +1,57 @@
+@if (!hideSiteChrome()) {
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" routerLink="/">
+      <span class="brand-text">
+        <span class="brand-name">{{ restaurantName }}</span>
+        <span class="brand-tag">KARACHI · BBQ &amp; DESI KITCHEN</span>
+      </span>
+    </a>
+    <div class="top-actions">
+      <a class="btn-header" href="https://wa.me/{{ whatsappNumber }}" target="_blank" rel="noopener">Order now</a>
+      <button class="auth-btn" (click)="onAuthClick()">
+        {{ auth.loggedIn() ? 'Log out' : 'Sign in' }}
+      </button>
+      <button class="icon-btn" (click)="cart.open()" aria-label="Open cart">
+        🛒
+        @if (cart.count() > 0) {
+          <span class="cart-badge">{{ cart.count() }}</span>
+        }
+      </button>
+    </div>
+  </div>
+</header>
+}
+
+<router-outlet></router-outlet>
+
+@if (!hideSiteChrome()) {
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="brand"><span class="brand-name">{{ restaurantName }}</span></div>
+      <p>Karachi's charcoal-grilled BBQ, slow-cooked karahi and biryani — made fresh, served bold.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>A#96, Kehkashan Society,<br>Malir Halt, Karachi</li>
+        <li><a href="tel:+923318889902">0331-8889902</a></li>
+        <li><a href="https://wa.me/{{ whatsappNumber }}" target="_blank" rel="noopener">Order on WhatsApp</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <ul><li>Monday – Sunday<br>12:00 PM – 12:00 AM</li></ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© {{ year }} {{ restaurantName }}. All rights reserved.</span>
+    <div class="foot-links">
+      <a routerLink="/track-order">Track your order</a>
+    </div>
+  </div>
+</footer>
+}
+
+<app-cart-drawer></app-cart-drawer>

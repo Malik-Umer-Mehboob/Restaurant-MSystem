@@ -1,0 +1,21 @@
+<div class="wrap">
+  <div class="card-shell">
+
+    <form class="card" (ngSubmit)="submit()">
+      <h2>Admin login</h2>
+      <p class="sub">Sign in to manage the menu, orders and analytics.</p>
+
+      <label>Username</label>
+      <input type="text" name="username" [(ngModel)]="username" required autocomplete="username" placeholder="admin">
+
+      <label>Password</label>
+      <input type="password" name="password" [(ngModel)]="password" required autocomplete="current-password" placeholder="••••••••">
+
+      @if (error()) { <p class="error">⚠ {{ error() }}</p> }
+
+      <button type="submit" [disabled]="loading()">{{ loading() ? 'Signing in…' : 'Sign in' }}</button>
+    </form>
+
+    <a class="back-link" routerLink="/">← Back to the website</a>
+  </div>
+</div>

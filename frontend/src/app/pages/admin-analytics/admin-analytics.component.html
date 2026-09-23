@@ -1,0 +1,49 @@
+<app-admin-nav></app-admin-nav>
+<div class="wrap">
+  <h2>Analytics</h2>
+
+  @if (loading()) {
+    <p class="state">Loading…</p>
+  } @else {
+    @if (data(); as d) {
+    <div class="stat-grid">
+      <div class="stat-card"><b>{{ d.totalOrders }}</b><span>Total orders</span></div>
+      <div class="stat-card"><b>Rs. {{ d.totalRevenue | number }}</b><span>Total revenue</span></div>
+      <div class="stat-card"><b>{{ d.todayOrders }}</b><span>Orders today</span></div>
+      <div class="stat-card"><b>Rs. {{ d.avgOrderValue | number }}</b><span>Avg. order value</span></div>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>Top-selling dishes</h3>
+        @if (d.topItems.length === 0) {
+          <p class="muted">No orders yet.</p>
+        } @else {
+          @for (item of d.topItems; track item.name) {
+            <div class="bar-row">
+              <span class="label">{{ item.name }}</span>
+              <div class="bar-track"><div class="bar-fill" [style.width.%]="(item.qty / maxTopQty()) * 100"></div></div>
+              <span class="value">{{ item.qty }}</span>
+            </div>
+          }
+        }
+      </div>
+
+      <div class="panel">
+        <h3>Orders by status</h3>
+        @if (statusEntries().length === 0) {
+          <p class="muted">No orders yet.</p>
+        } @else {
+          @for (entry of statusEntries(); track entry[0]) {
+            <div class="bar-row">
+              <span class="label status-label">{{ entry[0] }}</span>
+              <div class="bar-track"><div class="bar-fill" [style.width.%]="(entry[1] / maxStatusCount()) * 100"></div></div>
+              <span class="value">{{ entry[1] }}</span>
+            </div>
+          }
+        }
+      </div>
+    </div>
+    }
+  }
+</div>

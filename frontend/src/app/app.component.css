@@ -1,0 +1,82 @@
+/* ---------- Header ---------- */
+.topbar{
+  position:sticky; top:0; z-index:40;
+  background:rgba(250,243,230,0.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 1px 0 0 rgba(122,31,43,0.35);
+}
+.topbar-inner{
+  max-width:1180px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 20px; gap:20px;
+}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+.brand-text{display:inline-flex; align-items:baseline; gap:10px;}
+
+.brand-name{font-family:var(--font-head); font-size:1.4rem; font-weight:700; color:var(--bone); white-space:nowrap; letter-spacing:-0.01em;}
+.brand-tag{font-size:0.74rem; color:var(--gold); letter-spacing:0.06em; font-weight:700; text-decoration:none;}
+
+.top-actions{display:flex; align-items:center; gap:10px;}
+
+.btn-header{
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--ember); color:var(--on-accent); text-decoration:none;
+  padding:10px 20px; border-radius:22px; font-size:0.9rem; font-weight:700;
+  transition:background .15s ease, transform .15s ease;
+}
+.btn-header:hover{background:var(--ember-bright); transform:translateY(-1px);}
+
+.auth-btn{
+  display:inline-flex; align-items:center; gap:7px;
+  background:transparent; border:1px solid var(--line); color:var(--bone-dim);
+  padding:9px 16px; border-radius:22px; font-size:0.88rem; font-weight:700;
+  cursor:pointer; transition:all .15s ease;
+}
+.auth-btn:hover{border-color:var(--ember); color:var(--ember);}
+.icon-btn{
+  position:relative; background:none; border:1px solid var(--line); color:var(--bone);
+  width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  cursor:pointer; font-size:1.1rem; transition:all .15s ease;
+}
+.icon-btn:hover{border-color:var(--ember); background:rgba(122,31,43,0.06);}
+.cart-badge{
+  position:absolute; top:-4px; right:-4px; background:var(--gold); color:var(--on-accent);
+  font-size:0.65rem; font-weight:700; min-width:19px; height:19px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center; padding:0 4px;
+  border:2px solid var(--ink);
+}
+@media (max-width:760px){
+  .btn-header{padding:9px 14px; font-size:0.8rem;}
+  .auth-btn{padding:8px 12px; font-size:0.78rem;}
+}
+
+/* ---------- Footer ---------- */
+footer{
+  border-top:3px solid var(--ember);
+  background-color:#f2e7d3;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170' viewBox='0 0 170 170'%3E%3Cpath d='M85 34c-9 17-26 24-26 45a26 26 0 0 0 52 0c0-9-4-13-4-13s0 9-6 9c2-9-2-15-2-22 0 0-7 9-7 17-13-9-11-26-7-36z' fill='none' stroke='%237a1f2b' stroke-width='2' opacity='0.055'/%3E%3Ccircle cx='140' cy='35' r='4' fill='%23c9a13b' opacity='0.09'/%3E%3Ccircle cx='24' cy='128' r='3.2' fill='%237a1f2b' opacity='0.07'/%3E%3C/svg%3E");
+  padding:60px 20px 28px;
+}
+.foot-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:48px;}
+@media (max-width:760px){ .foot-inner{grid-template-columns:1fr; gap:36px;} }
+
+.foot-inner .brand-name{font-size:1.5rem;}
+.foot-inner p{color:var(--bone-dim); margin-top:16px; max-width:38ch; font-size:1.02rem; font-weight:600; line-height:1.7;}
+
+footer h4{
+  font-family:var(--font-head); font-size:1.05rem; color:var(--bone);
+  margin-bottom:16px; font-weight:700;
+}
+footer ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px;}
+footer li{color:var(--bone-dim); font-size:1.02rem; font-weight:600; line-height:1.6;}
+footer a{text-decoration:none; color:var(--bone-dim); font-weight:600; transition:color .15s ease;}
+footer a:hover{color:var(--ember);}
+
+.foot-bottom{
+  max-width:1180px; margin:44px auto 0; padding-top:22px; border-top:1px solid var(--line);
+  display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between; align-items:center;
+  color:var(--bone-dim); font-size:0.92rem; font-weight:600;
+}
+.foot-links{display:flex; gap:20px;}
+.foot-links a{font-weight:700; text-decoration:underline; text-underline-offset:3px;}

@@ -1,0 +1,95 @@
+<section class="hero">
+  <div class="inner hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow"> Karachi's charcoal &amp; clay-pot kitchen</div>
+      <h1>Bold flavor, <span>cooked over fire.</span></h1>
+      <p class="lead">From smoky BBQ skewers and slow-simmered karahi to biryani that means business — order online or straight to WhatsApp.</p>
+      <div class="ctas">
+        <a routerLink="/menu" class="btn primary">Browse the menu</a>
+        <a href="https://wa.me/{{ whatsappNumber }}" target="_blank" rel="noopener" class="btn outline">Order on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="blobGrad" cx="45%" cy="40%" r="65%">
+            <stop offset="0%" stop-color="#fbe4c8"/>
+            <stop offset="60%" stop-color="#f6d3ae"/>
+            <stop offset="100%" stop-color="#eec39a"/>
+          </radialGradient>
+         <linearGradient id="flameGrad" x1="0" y1="1" x2="0" y2="0">
+  <stop offset="0%" stop-color="#7a1f2b"/>
+  <stop offset="100%" stop-color="#f2a13a"/>
+</linearGradient>
+        </defs>
+
+        <!-- backdrop blob -->
+        <circle cx="240" cy="240" r="210" fill="url(#blobGrad)"/>
+
+        <!-- sparkles -->
+        <circle cx="90" cy="120" r="5" fill="var(--gold)"/>
+        <circle cx="400" cy="150" r="4" fill="var(--ember)"/>
+        <circle cx="410" cy="330" r="6" fill="var(--gold)"/>
+        <circle cx="70" cy="340" r="4" fill="var(--ember)"/>
+
+        <!-- steam -->
+        <path d="M195 150 C 185 130, 205 120, 195 100 C 187 84, 203 74, 197 58"
+              stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.65"/>
+        <path d="M240 150 C 230 128, 252 118, 242 96 C 234 80, 250 70, 244 52"
+              stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
+        <path d="M285 150 C 275 130, 295 120, 285 100 C 277 84, 293 74, 287 58"
+              stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.65"/>
+
+        <!-- skewers with kebab cubes -->
+        <g transform="rotate(-18 150 205)">
+          <rect x="60" y="200" width="185" height="7" rx="3.5" fill="var(--gold)"/>
+          <rect x="100" y="188" width="26" height="30" rx="5" fill="var(--ember)"/>
+          <rect x="140" y="188" width="26" height="30" rx="5" fill="#8a4a2b"/>
+          <rect x="180" y="188" width="26" height="30" rx="5" fill="var(--ember)"/>
+        </g>
+        <g transform="rotate(-4 150 205)">
+          <rect x="70" y="185" width="190" height="7" rx="3.5" fill="var(--gold)"/>
+          <rect x="112" y="172" width="26" height="30" rx="5" fill="#8a4a2b"/>
+          <rect x="154" y="172" width="26" height="30" rx="5" fill="var(--ember)"/>
+          <rect x="196" y="172" width="26" height="30" rx="5" fill="#8a4a2b"/>
+        </g>
+
+        <!-- karahi / wok -->
+        <ellipse cx="240" cy="300" rx="150" ry="42" fill="#241a14"/>
+        <path d="M92 296 Q240 372 388 296 L388 304 Q240 380 92 304 Z" fill="#1a120d"/>
+        <ellipse cx="240" cy="292" rx="150" ry="40" fill="none" stroke="var(--ember)" stroke-width="6"/>
+        <rect x="55" y="286" width="34" height="14" rx="7" fill="#1a120d"/>
+        <rect x="391" y="286" width="34" height="14" rx="7" fill="#1a120d"/>
+
+        <!-- food in karahi -->
+        <circle cx="185" cy="288" r="20" fill="#a13a1f"/>
+        <circle cx="230" cy="278" r="24" fill="#c24a26"/>
+        <circle cx="278" cy="290" r="20" fill="#8a2f1a"/>
+        <circle cx="255" cy="300" r="16" fill="#c24a26"/>
+        <circle cx="205" cy="304" r="15" fill="#a13a1f"/>
+
+        <!-- flames -->
+        <path d="M170 360 C160 345 175 335 172 320 C185 330 190 345 178 360 C 176 366 172 366 170 360Z" fill="url(#flameGrad)"/>
+        <path d="M240 372 C226 352 246 340 242 320 C 260 334 266 354 250 372 C 247 380 243 380 240 372Z" fill="url(#flameGrad)"/>
+        <path d="M310 360 C300 345 315 335 312 320 C325 330 330 345 318 360 C 316 366 312 366 310 360Z" fill="url(#flameGrad)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<section class="features">
+  <div class="feature">
+    <span class="feature-icon">🍖</span>
+    <div><b>Charcoal-grilled</b><span>Real fire, real smoke — every skewer</span></div>
+  </div>
+  <div class="feature">
+    <span class="feature-icon">🌿</span>
+    <div><b>Fresh, daily</b><span>Nothing sits — cooked when you order</span></div>
+  </div>
+  <div class="feature">
+    <span class="feature-icon">💬</span>
+    <div><b>Order on WhatsApp</b><span>No app, no hassle — just message us</span></div>
+  </div>
+</section>

@@ -1,0 +1,1191 @@
+[
+  {
+    "id": "biryani-beef",
+    "name": "Beef Biryani",
+    "urdu": "بیف بریانی",
+    "category": "Rice & Biryani",
+    "description": "Tastes as authentic as biryani gets.",
+    "price": 400,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "pulao-beef",
+    "name": "Beef Pulao",
+    "urdu": "بیف پلاؤ",
+    "category": "Rice & Biryani",
+    "description": "Fragrant beef pulao with tender meat, basmati rice and traditional spices — a one-pot meal that rivals biryani.",
+    "price": 400,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "biryani-chicken",
+    "name": "Chicken Biryani",
+    "urdu": "چکن بریانی",
+    "category": "Rice & Biryani",
+    "description": "Moist, saucy and spiced rice with chicken.",
+    "price": 400,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "pulao-chicken",
+    "name": "Chicken Pulao",
+    "urdu": "چکن پلاؤ",
+    "category": "Rice & Biryani",
+    "description": "Rice with onions, chicken and flavour that makes you go wow.",
+    "price": 300,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "haleem",
+    "name": "Chicken Haleem",
+    "urdu": "چکن حلیم",
+    "category": "Salan",
+    "description": "Shredded chicken, lentil and pounded wheat — rich colour, thick creamy texture.",
+    "price": 200,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "qorma",
+    "name": "Chicken Qorma",
+    "urdu": "چکن قورمہ",
+    "category": "Salan",
+    "description": "Chicken cooked in a rich, traditional qorma gravy.",
+    "price": 450,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "aloo-gosht",
+    "name": "Aloo Gosht",
+    "urdu": "آلو گوشت",
+    "category": "Salan",
+    "description": "Meat and potato curry in traditional gravy.",
+    "price": 400,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "anda-chana",
+    "name": "Anda Chana",
+    "urdu": "انڈا چنا",
+    "category": "Salan",
+    "description": "Chickpea curry with boiled egg.",
+    "price": 160,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "anda-tamatar",
+    "name": "Anda Tamatar",
+    "urdu": "انڈا ٹماٹر",
+    "category": "Salan",
+    "description": "Eggs cooked with tomatoes and spices.",
+    "price": 200,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "chicken-kofta",
+    "name": "Chicken Kofta",
+    "urdu": "چکن کوفتہ",
+    "category": "Salan",
+    "description": "Minced chicken meatballs simmered in spiced curry.",
+    "price": 350,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "chicken-qeema",
+    "name": "Chicken Qeema",
+    "urdu": "چکن قیمہ",
+    "category": "Salan",
+    "description": "Spiced minced chicken cooked dry with masala.",
+    "price": 350,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "daal-chana",
+    "name": "Daal Chana",
+    "urdu": "دال چنا",
+    "category": "Salan",
+    "description": "Split chickpea lentils with aromatic spices.",
+    "price": 160,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "daal-chawal",
+    "name": "Daal Chawal",
+    "urdu": "دال چاول",
+    "category": "Salan",
+    "description": "Lentils served with steamed rice.",
+    "price": 250,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "daal-ghotala",
+    "name": "Daal Ghotala",
+    "urdu": "دال گھوٹالہ",
+    "category": "Salan",
+    "description": "Mixed lentils mashed together with masala.",
+    "price": 200,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "daal-gosht",
+    "name": "Daal Gosht",
+    "urdu": "دال گوشت",
+    "category": "Salan",
+    "description": "Lentils slow-cooked with meat.",
+    "price": 400,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "daal-mash",
+    "name": "Daal Mash",
+    "urdu": "دال ماش",
+    "category": "Salan",
+    "description": "White lentils with butter tadka.",
+    "price": 210,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "daal-mong",
+    "name": "Daal Mong",
+    "urdu": "دال مونگ",
+    "category": "Salan",
+    "description": "Yellow moong lentils tempered with spices.",
+    "price": 160,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "kaleji",
+    "name": "Kaleji",
+    "urdu": "کلیجی",
+    "category": "Salan",
+    "description": "Fried liver tossed with onions and spices.",
+    "price": 250,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "kari-pakora",
+    "name": "Kari Pakora",
+    "urdu": "کڑھی پکوڑا",
+    "category": "Salan",
+    "description": "Yogurt curry with gram-flour fritters.",
+    "price": 200,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "mix-sabzi",
+    "name": "Mix Sabzi",
+    "urdu": "مکس سبزی",
+    "category": "Salan",
+    "description": "Mixed seasonal vegetables cooked in masala.",
+    "price": 160,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "murgh-chana",
+    "name": "Murgh Chana",
+    "urdu": "مرغ چنا",
+    "category": "Salan",
+    "description": "Chickpeas cooked with chicken in spiced gravy.",
+    "price": 300,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "nihari",
+    "name": "Nihari",
+    "urdu": "نہاری",
+    "category": "Salan",
+    "description": "Strong spices, tender beef, wonderful aroma — an all-time local favourite.",
+    "price": 450,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "sada-chana",
+    "name": "Sada Chana",
+    "urdu": "سادہ چنا",
+    "category": "Salan",
+    "description": "Plain chickpea curry with light spices.",
+    "price": 160,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "bihari-boti",
+    "name": "Bihari Boti",
+    "urdu": "بہاری بوٹی",
+    "category": "BBQ",
+    "description": "Tender Bihari-style marinated beef boti, grilled.",
+    "price": 350,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "chandan-kabab",
+    "name": "Chandan Kabab",
+    "urdu": "چندن کباب",
+    "category": "BBQ",
+    "description": "Specialty chandan kababs with a rich spice blend.",
+    "price": 400,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "malai-boti",
+    "name": "Chicken Malai Boti",
+    "urdu": "چکن ملائی بوٹی",
+    "category": "BBQ",
+    "description": "Creamy chicken boti grilled to perfection.",
+    "price": 350,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "chicken-tikka",
+    "name": "Chicken Tikka",
+    "urdu": "چکن تکہ",
+    "category": "BBQ",
+    "description": "Classic spiced chicken tikka, charcoal grilled.",
+    "price": 450,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "malai-tikka",
+    "name": "Malai Tikka",
+    "urdu": "ملائی تکہ",
+    "category": "BBQ",
+    "description": "Creamy malai-marinated chicken tikka.",
+    "price": 550,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "turkish-kabab",
+    "name": "Turkish Kabab",
+    "urdu": "ترکش کباب",
+    "category": "BBQ",
+    "description": "Turkish-style grilled kababs.",
+    "price": 400,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "beef-boti",
+    "name": "Beef Boti",
+    "urdu": "بیف بوٹی",
+    "category": "BBQ",
+    "description": "Spiced beef cubes grilled on charcoal.",
+    "price": 350,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "chest-tikka",
+    "name": "Chest Tikka",
+    "urdu": "چیسٹ تکہ",
+    "category": "BBQ",
+    "description": "Grilled chicken breast tikka with spices.",
+    "price": 500,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "reshmi-kabab",
+    "name": "Chicken Reshmi Kabab",
+    "urdu": "چکن ریشمی کباب",
+    "category": "BBQ",
+    "description": "Silky smooth minced chicken kababs.",
+    "price": 350,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "seekh-kabab",
+    "name": "Chicken Seekh Kabab",
+    "urdu": "چکن سیخ کباب",
+    "category": "BBQ",
+    "description": "Minced chicken seekh kababs with herbs and spices.",
+    "price": 350,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "gola-kabab",
+    "name": "Gola Kabab",
+    "urdu": "گولا کباب",
+    "category": "BBQ",
+    "description": "Soft minced meat gola kababs grilled on skewers.",
+    "price": 350,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "red-chicken-boti",
+    "name": "Red Chicken Boti",
+    "urdu": "ریڈ چکن بوٹی",
+    "category": "BBQ",
+    "description": "Spicy red-marinated boneless chicken boti.",
+    "price": 350,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "white-tikka",
+    "name": "White Tikka",
+    "urdu": "وائٹ تکہ",
+    "category": "BBQ",
+    "description": "Mild white-marinated chicken tikka.",
+    "price": 500,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "double-zinger",
+    "name": "Double Dekkar Zinger",
+    "urdu": "ڈبل ڈیکر زنگر",
+    "category": "Fast Food",
+    "description": "Double-stacked crispy zinger burger.",
+    "price": 700,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "loaded-fries",
+    "name": "Loaded Fries",
+    "urdu": "لوڈڈ فرائز",
+    "category": "Fast Food",
+    "description": "Fries loaded with chicken, cheese and sauces.",
+    "price": 450,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "special-sandwich",
+    "name": "Shahi Angaar Special Sandwich",
+    "urdu": "شاہی انگار اسپیشل سینڈوچ",
+    "category": "Fast Food",
+    "description": "Our house special loaded sandwich.",
+    "price": 500,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "zinger-burger",
+    "name": "Zinger Burger",
+    "urdu": "زنگر برگر",
+    "category": "Fast Food",
+    "description": "Crispy fried chicken zinger burger.",
+    "price": 450,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "bbq-sandwich",
+    "name": "BBQ Sandwich",
+    "urdu": "بی بی کیو سینڈوچ",
+    "category": "Fast Food",
+    "description": "Smoky BBQ chicken sandwich.",
+    "price": 500,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "beef-bihari-roll",
+    "name": "Beef Bihari Chatni Roll",
+    "urdu": "بیف بہاری چٹنی رول",
+    "category": "Fast Food",
+    "description": "Bihari beef wrapped with chutney in paratha.",
+    "price": 250,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "beef-boti-roll",
+    "name": "Beef Boti Chatni Roll",
+    "urdu": "بیف بوٹی چٹنی رول",
+    "category": "Fast Food",
+    "description": "Beef boti wrapped in paratha with chutney.",
+    "price": 250,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "beef-burger",
+    "name": "Beef Burger",
+    "urdu": "بیف برگر",
+    "category": "Fast Food",
+    "description": "Juicy beef patty burger.",
+    "price": 400,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "beef-kabab-roll",
+    "name": "Beef Kabab Roll",
+    "urdu": "بیف کباب رول",
+    "category": "Fast Food",
+    "description": "Beef kabab roll with onions and chutney.",
+    "price": 250,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "beef-patty-burger",
+    "name": "Beef Patty Burger",
+    "urdu": "بیف پیٹی برگر",
+    "category": "Fast Food",
+    "description": "Beef patty burger with classic toppings.",
+    "price": 400,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "broast-chest",
+    "name": "Broast Chest",
+    "urdu": "بروسٹ چیسٹ",
+    "category": "Fast Food",
+    "description": "Crispy chicken broast breast piece.",
+    "price": 550,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "broast-full",
+    "name": "Broast Full",
+    "urdu": "بروسٹ فل",
+    "category": "Fast Food",
+    "description": "Full chicken broast.",
+    "price": 1800,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "broast-leg",
+    "name": "Broast Leg",
+    "urdu": "بروسٹ لیگ",
+    "category": "Fast Food",
+    "description": "Crispy chicken broast leg piece.",
+    "price": 550,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "chicken-burger",
+    "name": "Chicken Burger",
+    "urdu": "چکن برگر",
+    "category": "Fast Food",
+    "description": "Grilled chicken burger with fresh toppings.",
+    "price": 400,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "chicken-chatni-roll",
+    "name": "Chicken Chatni Roll",
+    "urdu": "چکن چٹنی رول",
+    "category": "Fast Food",
+    "description": "Chicken roll with fresh chutney.",
+    "price": 250,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "chicken-club",
+    "name": "Chicken Club Sandwich",
+    "urdu": "چکن کلب سینڈوچ",
+    "category": "Fast Food",
+    "description": "Triple-layer chicken club sandwich.",
+    "price": 500,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "chicken-mayo-roll",
+    "name": "Chicken Mayo Roll",
+    "urdu": "چکن میو رول",
+    "category": "Fast Food",
+    "description": "Chicken roll with creamy mayo.",
+    "price": 250,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "chicken-patty-burger",
+    "name": "Chicken Patty Burger",
+    "urdu": "چکن پیٹی برگر",
+    "category": "Fast Food",
+    "description": "Chicken patty burger with classic toppings.",
+    "price": 400,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "chicken-reshmi-roll",
+    "name": "Chicken Reshmi Roll",
+    "urdu": "چکن ریشمی رول",
+    "category": "Fast Food",
+    "description": "Reshmi chicken kabab roll.",
+    "price": 250,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "crispy-club",
+    "name": "Crispy Club Sandwich",
+    "urdu": "کرسپی کلب سینڈوچ",
+    "category": "Fast Food",
+    "description": "Club sandwich with crispy fried chicken.",
+    "price": 500,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "masala-fries",
+    "name": "Masala Fries",
+    "urdu": "مصالحہ فرائز",
+    "category": "Fast Food",
+    "description": "Fries tossed in special masala spice.",
+    "price": 100,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "mayo-fries",
+    "name": "Mayo Fries",
+    "urdu": "میو فرائز",
+    "category": "Fast Food",
+    "description": "Fries drizzled with creamy mayo.",
+    "price": 150,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "plain-fries",
+    "name": "Plain Fries",
+    "urdu": "پلین فرائز",
+    "category": "Fast Food",
+    "description": "Classic salted french fries.",
+    "price": 100,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "shapater-roll",
+    "name": "Shapater Roll",
+    "urdu": "شاپاتر رول",
+    "category": "Fast Food",
+    "description": "Loaded Shapater special roll.",
+    "price": 700,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "zinger-jumbo-roll",
+    "name": "Zinger Jumbo Roll",
+    "urdu": "زنگر جمبو رول",
+    "category": "Fast Food",
+    "description": "Large jumbo zinger chicken roll.",
+    "price": 450,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "zinger-roll",
+    "name": "Zinger Roll",
+    "urdu": "زنگر رول",
+    "category": "Fast Food",
+    "description": "Crispy zinger chicken roll.",
+    "price": 250,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "chilli-dry-rice",
+    "name": "Chicken Chilli Dry with Rice",
+    "urdu": "چکن چلی ڈرائی وِد رائس",
+    "category": "Chef Special",
+    "description": "Dry chilli chicken served with rice.",
+    "price": 700,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "chowmein",
+    "name": "Chicken Chowmein",
+    "urdu": "چکن چاؤمین",
+    "category": "Chef Special",
+    "description": "Stir-fried noodles with chicken and vegetables.",
+    "price": 700,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "platter-2",
+    "name": "2 Person Platter",
+    "urdu": "ٹو پرسن پلیٹر",
+    "category": "Platters",
+    "description": "For 2: Pulao/Biryani (optional), 800g rice, 1 leg tikka, 1 turkish kabab.",
+    "price": 1250,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "platter-5",
+    "name": "5 Person Platter",
+    "urdu": "فائیو پرسن پلیٹر",
+    "category": "Platters",
+    "description": "For 5: Pulao/Biryani (optional), 2.5kg rice, 2 leg tikka, reshmi/chandan/turkish kabab seekh, grilled vegetables.",
+    "price": 2400,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "platter-6-family",
+    "name": "6 Person Family Platter",
+    "urdu": "سکس پرسن فیملی پلیٹر",
+    "category": "Platters",
+    "description": "White & red leg tikka, gola/turkish/chandan kabab, chicken boti, 1kg rice, 1.5L cold drink, 5 paratha, half kg karahi.",
+    "price": 4700,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "platter-bbq-mix",
+    "name": "BBQ Rice Platter (Mix Family)",
+    "urdu": "بی بی کیو رائس مکس فیملی پلیٹر",
+    "category": "Platters",
+    "description": "Red karahi (qtr), reshmi handi (qtr), chicken biryani, club sandwich, chilli dry with rice, naan, cold drink, salad & raita.",
+    "price": 3333,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "platter-4",
+    "name": "4 Person Platter",
+    "urdu": "فور پرسن پلیٹر",
+    "category": "Platters",
+    "description": "For 4: 900g rice, chicken tikka leg, turkish kabab, seekh boti, beef seekh kabab, 4 paratha, qtr karahi.",
+    "price": 2000,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "platter-7-8",
+    "name": "7 & 8 Person Platter",
+    "urdu": "سیون اینڈ ایٹ پرسن پلیٹر",
+    "category": "Platters",
+    "description": "For 7–8: 2kg rice with 4 chicken pcs, Pulao/Biryani, tikka boti seekh, malai boti seekh, 6 naan, puri paratha.",
+    "price": 3500,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "platter-bbq-2",
+    "name": "BBQ Rice Platter (2 Person)",
+    "urdu": "بی بی کیو رائس ٹو پرسن پلیٹر",
+    "category": "Platters",
+    "description": "For 2: 450g rice, chicken tikka, turkish kabab, 2 paratha, malai boti plate.",
+    "price": 1200,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "karahi-special",
+    "name": "Shahi Angaar Special Karahi",
+    "urdu": "شاہی انگار اسپیشل کڑاہی",
+    "category": "Karahi",
+    "description": "Our signature chicken karahi.",
+    "price": 700,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "karahi-red",
+    "name": "Red Karahi",
+    "urdu": "ریڈ کڑاہی",
+    "category": "Karahi",
+    "description": "Shinwari-style red chicken karahi with tomatoes and chilies.",
+    "price": 650,
+    "tags": [
+      "hot",
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "karahi-beef-qeema",
+    "name": "Beef Qeema Karahi",
+    "urdu": "بیف قیمہ کڑاہی",
+    "category": "Karahi",
+    "description": "Minced beef karahi cooked with masala.",
+    "price": 1500,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "karahi-boneless",
+    "name": "Boneless Karahi",
+    "urdu": "بون لیس کڑاہی",
+    "category": "Karahi",
+    "description": "Boneless chicken karahi, Shinwari style.",
+    "price": 1500,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "karahi-green",
+    "name": "Green Karahi",
+    "urdu": "گرین کڑاہی",
+    "category": "Karahi",
+    "description": "Chicken karahi with fresh herbs and green chilies.",
+    "price": 1200,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "karahi-mutton-shinwari",
+    "name": "Mutton Shinwari Karahi",
+    "urdu": "مٹن شنواری کڑاہی",
+    "category": "Karahi",
+    "description": "Traditional Shinwari-style mutton karahi.",
+    "price": 1200,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "karahi-mutton-white",
+    "name": "Mutton White Karahi",
+    "urdu": "مٹن وائٹ کڑاہی",
+    "category": "Karahi",
+    "description": "Creamy white mutton karahi with mild spices.",
+    "price": 2400,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "karahi-white",
+    "name": "White Karahi",
+    "urdu": "وائٹ کڑاہی",
+    "category": "Karahi",
+    "description": "Creamy white chicken karahi with mild spices.",
+    "price": 700,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "handi-makhni",
+    "name": "Chicken Boneless Makhni Handi",
+    "urdu": "چکن بون لیس مکھنی ہانڈی",
+    "category": "Handi",
+    "description": "Boneless chicken in a rich, buttery makhni gravy.",
+    "price": 1300,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "handi-masala",
+    "name": "Masala Handi",
+    "urdu": "مصالحہ ہانڈی",
+    "category": "Handi",
+    "description": "Spicy masala chicken handi, cooked in a clay pot.",
+    "price": 1300,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "handi-reshmi",
+    "name": "Reshmi Handi",
+    "urdu": "ریشمی ہانڈی",
+    "category": "Handi",
+    "description": "Smooth, silky chicken reshmi handi.",
+    "price": 1300,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "handi-white",
+    "name": "White Handi",
+    "urdu": "وائٹ ہانڈی",
+    "category": "Handi",
+    "description": "Creamy white chicken handi with mild spices.",
+    "price": 1300,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "chicken-fried-rice",
+    "name": "Chicken Fried Rice",
+    "urdu": "چکن فرائیڈ رائس",
+    "category": "Chinese",
+    "description": "Stir-fried rice with chicken and vegetables.",
+    "price": 500,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "schezwan-rice",
+    "name": "Chicken Schezwan With Rice",
+    "urdu": "چکن شیزوان وِد رائس",
+    "category": "Chinese",
+    "description": "Spicy schezwan chicken served with rice.",
+    "price": 700,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "shashlik-rice",
+    "name": "Chicken Shashlik With Rice",
+    "urdu": "چکن ششلک وِد رائس",
+    "category": "Chinese",
+    "description": "Chicken shashlik with peppers and onions, over rice.",
+    "price": 700,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "dragon-chicken",
+    "name": "Dragon Chicken With Rice",
+    "urdu": "ڈریگن چکن وِد رائس",
+    "category": "Chinese",
+    "description": "Crispy dragon chicken served with rice.",
+    "price": 700,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "egg-fried-rice",
+    "name": "Egg Fried Rice",
+    "urdu": "ایگ فرائیڈ رائس",
+    "category": "Chinese",
+    "description": "Classic egg fried rice with vegetables.",
+    "price": 500,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "kung-pao",
+    "name": "Kung Pao Chicken With Rice",
+    "urdu": "کنگ پاؤ چکن وِد رائس",
+    "category": "Chinese",
+    "description": "Kung Pao chicken with peanuts, served with rice.",
+    "price": 700,
+    "tags": [
+      "spicy"
+    ],
+    "image": ""
+  },
+  {
+    "id": "alfredo",
+    "name": "Alfredo Pasta",
+    "urdu": "الفریڈو پاستا",
+    "category": "Pasta",
+    "description": "Creamy alfredo pasta with chicken.",
+    "price": 1000,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "mac-cheese",
+    "name": "Mac & Cheese",
+    "urdu": "میک اینڈ چیز",
+    "category": "Pasta",
+    "description": "Classic macaroni in a creamy cheese sauce.",
+    "price": 450,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "cold-drink",
+    "name": "Cold Drink",
+    "urdu": "کولڈ ڈرنک",
+    "category": "Beverages",
+    "description": "Chilled soft drink, available in multiple sizes.",
+    "price": 70,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "mineral-water",
+    "name": "Mineral Water",
+    "urdu": "منرل واٹر",
+    "category": "Beverages",
+    "description": "Bottled mineral water.",
+    "price": 60,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "chai",
+    "name": "Chai",
+    "urdu": "چائے",
+    "category": "Tea & Coffee",
+    "description": "Traditional doodh patti chai.",
+    "price": 80,
+    "tags": [
+      "hot"
+    ],
+    "image": ""
+  },
+  {
+    "id": "cappuccino",
+    "name": "Cappuccino",
+    "urdu": "کیپوچینو",
+    "category": "Tea & Coffee",
+    "description": "Frothy cappuccino coffee.",
+    "price": 380,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "green-tea",
+    "name": "Green Tea",
+    "urdu": "گرین ٹی",
+    "category": "Tea & Coffee",
+    "description": "Refreshing green tea.",
+    "price": 100,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "kashmiri-chai",
+    "name": "Kashmiri Chai",
+    "urdu": "کشمیری چائے",
+    "category": "Tea & Coffee",
+    "description": "Pink Kashmiri tea topped with nuts.",
+    "price": 200,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "lemon-tea",
+    "name": "Lemon Tea",
+    "urdu": "لیمن ٹی",
+    "category": "Tea & Coffee",
+    "description": "Hot lemon tea.",
+    "price": 100,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "custard",
+    "name": "Custard",
+    "urdu": "کسٹرڈ",
+    "category": "Desserts",
+    "description": "Chilled fruit custard.",
+    "price": 130,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "doodh-bottle",
+    "name": "Doodh Bottle",
+    "urdu": "دودھ بوتل",
+    "category": "Desserts",
+    "description": "Sweet milk bottle dessert drink.",
+    "price": 130,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "zarda",
+    "name": "Zarda",
+    "urdu": "زردہ",
+    "category": "Desserts",
+    "description": "Sweet yellow rice with nuts and raisins.",
+    "price": 130,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "chapati",
+    "name": "Chapati",
+    "urdu": "چپاتی",
+    "category": "Extras",
+    "description": "Whole wheat tandoori roti.",
+    "price": 25,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "extra-bun",
+    "name": "Extra Bun",
+    "urdu": "ایکسٹرا بن",
+    "category": "Extras",
+    "description": "Additional burger bun.",
+    "price": 50,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "extra-cheese",
+    "name": "Extra Cheese",
+    "urdu": "ایکسٹرا چیز",
+    "category": "Extras",
+    "description": "Additional cheese slice.",
+    "price": 50,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "naan",
+    "name": "Naan",
+    "urdu": "نان",
+    "category": "Extras",
+    "description": "Fresh tandoori naan.",
+    "price": 30,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "raita",
+    "name": "Raita",
+    "urdu": "رائتہ",
+    "category": "Extras",
+    "description": "Yogurt with cucumber and spices.",
+    "price": 60,
+    "tags": [],
+    "image": ""
+  },
+  {
+    "id": "salad",
+    "name": "Salad",
+    "urdu": "سلاد",
+    "category": "Extras",
+    "description": "Fresh garden salad.",
+    "price": 60,
+    "tags": [],
+    "image": ""
+  }
+]

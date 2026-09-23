@@ -1,0 +1,12 @@
+.wrap{max-width:1180px; margin:0 auto; padding:32px 20px 80px;}
+h2{color:var(--bone); font-size:1.5rem; margin-bottom:20px;}
+.state{color:var(--bone-dim);}
+.table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:4px;}
+table{width:100%; border-collapse:collapse; min-width:760px;}
+th,td{padding:12px 14px; text-align:left; border-bottom:1px solid var(--line); font-size:0.86rem;}
+th{color:var(--gold); font-size:0.7rem; letter-spacing:0.04em; text-transform:uppercase;}
+td{color:var(--bone-dim);}
+select{
+  background:var(--charcoal); color:var(--bone); border:1px solid var(--line);
+  padding:6px 10px; border-radius:4px; font-size:0.82rem; text-transform:capitalize;
+}

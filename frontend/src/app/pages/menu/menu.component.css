@@ -1,0 +1,78 @@
+.menu-section{max-width:1180px; margin:0 auto; padding:60px 20px 80px;}
+.menu-head{margin-bottom:28px;}
+.menu-head h2{font-family:var(--font-display); font-weight:800; font-size:clamp(2.2rem, 4vw, 3.2rem); letter-spacing:0.02em; color:var(--bone);}
+.menu-head p{color:var(--bone-dim); margin-top:10px; max-width:60ch; font-weight:700;}
+
+.search-wrap{
+  position:relative; margin-top:22px; max-width:440px;
+}
+.search-wrap input{
+  width:100%; background:var(--charcoal); border:1px solid var(--line); color:var(--bone);
+  padding:12px 40px 12px 18px; border-radius:24px; font-size:0.92rem; font-family:inherit;
+}
+.search-wrap input:focus{outline:2px solid var(--ember); outline-offset:1px;}
+.search-wrap input::placeholder{color:var(--bone-dim);}
+.search-wrap .clear{
+  position:absolute; right:10px; top:50%; transform:translateY(-50%);
+  background:none; border:none; color:var(--bone-dim); font-size:1.3rem; cursor:pointer; line-height:1;
+}
+
+.rating-row{
+  display:flex; align-items:center; justify-content:space-between; gap:8px;
+  background:none; border:none; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  padding:8px 0; margin:2px 0; cursor:pointer; width:100%; text-align:left;
+}
+.rate-link{font-size:0.74rem; color:var(--bone-dim); text-decoration:underline;}
+.state{color:var(--bone-dim); padding:40px 0;}
+.state.error{color:var(--ember-bright);}
+
+.tabs-wrap{
+  position:sticky; top:71px; z-index:30; background:var(--ink);
+  padding:12px 0 14px; margin-bottom:26px; border-bottom:1px solid var(--line);
+}
+.tabs{display:flex; gap:8px; overflow-x:auto; padding:2px 0; scrollbar-width:none; -ms-overflow-style:none;}
+.tabs::-webkit-scrollbar{display:none; height:0;}
+.tab{
+  flex:none; padding:9px 16px; border-radius:20px; border:1px solid var(--line);
+  background:transparent; color:var(--bone-dim); font-size:0.86rem; font-weight:500;
+  cursor:pointer; white-space:nowrap;
+}
+.tab.active{background:var(--bone); border-color:var(--bone); color:var(--on-accent);}
+
+.cat-title{display:flex; align-items:baseline; gap:10px; margin:34px 0 16px;}
+.cat-title h3{font-size:1.35rem; color:var(--bone);}
+.cat-title .count{font-size:0.8rem; color:var(--bone-dim);}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:16px;}
+.card{
+  background:var(--charcoal); border:1px solid var(--line); border-radius:4px;
+  padding:18px; display:flex; flex-direction:column; gap:10px;
+}
+.card:hover{border-color:rgba(122,31,43,0.55);}
+.card-top{display:flex; justify-content:space-between; gap:10px;}
+.card-id{display:flex; align-items:flex-start; gap:12px;}
+.icon-circle{
+  width:46px; height:46px; border-radius:50%; flex:none; font-size:1.3rem;
+  background:radial-gradient(circle at 35% 30%, rgba(122,31,43,0.28), rgba(122,31,43,0.08) 75%);
+  border:1px solid rgba(122,31,43,0.35);
+  display:flex; align-items:center; justify-content:center;
+}
+.thumb{width:46px; height:46px; border-radius:50%; object-fit:cover; flex:none; border:1px solid var(--line);}
+.card-name{font-family:var(--font-head); font-size:1.1rem; color:var(--bone); font-weight:700;}
+.card-urdu{font-size:1.05rem; color:var(--bone-dim); margin-top:2px;}
+.badges{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end;}
+.badge{font-size:0.62rem; padding:3px 7px; border-radius:10px; font-weight:600; white-space:nowrap;}
+.badge.hot{background:rgba(207,154,62,0.16); color:var(--gold); border:1px solid rgba(207,154,62,0.4);}
+.badge.spicy{background:rgba(122,31,43,0.16); color:var(--ember-bright); border:1px solid rgba(122,31,43,0.4);}
+.card-desc{font-size:0.86rem; color:var(--bone-dim); flex:1;}
+.card-bottom{display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:6px;}
+.price{font-family:'Inter',sans-serif; color:var(--bone); font-size:1rem; font-weight:700;}
+.price small{color:var(--bone-dim); font-family:'Inter',sans-serif; font-size:0.72rem;}
+
+.add-btn{
+  height:32px; padding:0 14px; border-radius:16px; font-size:0.82rem; border:none;
+  background:var(--ember); color:var(--on-accent); cursor:pointer;
+}
+.qty-add{display:flex; align-items:center; gap:10px; border:1px solid var(--line); border-radius:20px; padding:4px;}
+.qty-add button{width:26px; height:26px; border-radius:50%; border:none; background:var(--ember); color:var(--on-accent); cursor:pointer;}
+.qty-add span{min-width:16px; text-align:center; font-size:0.9rem; color:var(--bone);}

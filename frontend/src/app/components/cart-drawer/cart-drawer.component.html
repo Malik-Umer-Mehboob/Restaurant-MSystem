@@ -1,0 +1,44 @@
+<div class="overlay" [class.open]="cart.isOpen()" (click)="cart.close()"></div>
+
+<aside class="drawer" [class.open]="cart.isOpen()">
+  <div class="head">
+    <h3>Your order</h3>
+    <button class="close" (click)="cart.close()" aria-label="Close cart">×</button>
+  </div>
+
+  <div class="items">
+    @if (cart.items().length === 0) {
+      <p class="empty">Your cart is empty.<br>Add something delicious from the menu.</p>
+    } @else {
+      @for (line of cart.items(); track line.item._id) {
+        <div class="row">
+          <div class="info">
+            <div class="name">{{ line.item.name }}</div>
+            <div class="price">Rs. {{ line.item.price | number }} × {{ line.qty }} = Rs. {{ line.item.price * line.qty | number }}</div>
+            <button class="remove" (click)="cart.remove(line.item._id!)">Remove</button>
+          </div>
+          <div class="stepper">
+            <button (click)="cart.decrease(line.item._id!)">−</button>
+            <span>{{ line.qty }}</span>
+            <button (click)="cart.add(line.item)">+</button>
+          </div>
+        </div>
+      }
+    }
+  </div>
+
+  <div class="foot">
+    <div class="total"><span>Total</span><span>Rs. {{ cart.total() | number }}</span></div>
+
+    @if (cart.items().length > 0) {
+      <input type="text" placeholder="Your name (optional)" [(ngModel)]="customerName" class="field">
+      <input type="tel" placeholder="Phone number (for order tracking)" [(ngModel)]="customerPhone" class="field">
+      @if (error()) { <p class="err">{{ error() }}</p> }
+    }
+
+    <button class="btn-primary" [disabled]="cart.items().length === 0 || saving()" (click)="checkout()">
+      {{ saving() ? 'Placing order…' : 'Send order on WhatsApp' }}
+    </button>
+    <p class="note">You'll confirm final price &amp; payment with the restaurant on WhatsApp.</p>
+  </div>
+</aside>

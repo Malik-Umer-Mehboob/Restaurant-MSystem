@@ -6,23 +6,7 @@ A full-stack restaurant ordering website for **Shahi Angaar** — Karachi's char
 
 ---
 
-## Table of contents
 
-- [Features](#features)
-- [Tech stack](#tech-stack)
-- [Project structure](#project-structure)
-- [Getting started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [1. Backend setup](#1-backend-setup)
-  - [2. Frontend setup](#2-frontend-setup)
-- [Default admin login](#default-admin-login)
-- [API reference](#api-reference)
-- [Environment variables](#environment-variables)
-- [Deployment](#deployment)
-- [Roadmap](#roadmap)
-- [License](#license)
-
----
 
 ## Features
 

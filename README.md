@@ -1,41 +1,88 @@
-# Shahi Angaar — Full-Stack Website
+# 🍢 Shahi Angaar
 
-A restaurant ordering website with:
-- **Frontend:** Angular 18 (standalone components, signals)
-- **Backend:** PHP 8 REST API
-- **Database:** MongoDB
-- **Admin panel:** add/edit/delete menu items, upload photos
-- **Ordering:** cart → WhatsApp checkout (no payment gateway needed)
+A full-stack restaurant ordering website for **Shahi Angaar** — Karachi's charcoal-grilled BBQ, karahi and biryani kitchen. Customers browse the menu, search dishes, leave ratings, add items to a cart and check out straight to WhatsApp. A password-protected admin panel manages the menu, tracks orders and shows sales analytics.
 
-```
-project/
-├── frontend/     Angular app (what customers and the admin see)
-└── backend/      PHP API + MongoDB (menu data, admin login, image uploads)
-```
-
-This was built and syntax-checked in a sandbox, but it has **not** been
-run end-to-end against a real MongoDB server — you'll do that on your own
-machine or server, following the steps below. Everything is standard,
-well-documented tooling (Angular CLI, Composer, MongoDB), so a developer
-familiar with any of these can also pick it up easily.
+**Stack:** Angular (frontend) · PHP (REST API) · MongoDB (database)
 
 ---
 
-## 1. Install prerequisites (once)
 
-On your computer or server, install:
-- **Node.js** 18+ and npm — https://nodejs.org
-- **PHP** 8.1+ with the **MongoDB extension**:
-  - Ubuntu/Debian: `sudo apt install php php-cli php-mbstring php-xml php-mongodb`
-  - If `php-mongodb` isn't available as a package, install it via PECL: `sudo pecl install mongodb` then add `extension=mongodb.so` to your `php.ini`
-- **Composer** (PHP package manager) — https://getcomposer.org/download/
-- **MongoDB** — either:
-  - Install locally: https://www.mongodb.com/docs/manual/installation/, or
-  - Use a free **MongoDB Atlas** cluster (easier, no install): https://www.mongodb.com/cloud/atlas — create a free cluster and copy its connection string
+
+## Features
+
+**Customer-facing**
+- 🍽️ Full menu — 100+ dishes across 14 categories (BBQ, Karahi, Biryani, Fast Food, Chinese, Desserts, and more)
+- 🔍 Live search across the whole menu
+- 🔥 "Hot Selling" quick filter alongside category tabs
+- ⭐ Star ratings & reviews on every dish — no login required
+- 🛒 Cart with quantity controls, persisted in the browser
+- 💬 One-tap checkout — order summary is sent straight to WhatsApp
+- 📦 Order tracking by phone number (`/track-order`)
+
+**Admin panel** (`/admin/login`)
+- 🔐 JWT-protected login
+- 🍢 Menu management — add, edit, delete dishes; upload a photo per dish
+- 📋 Orders dashboard — see every order, update status (pending → preparing → ready → completed/cancelled)
+- 📊 Analytics — total orders, revenue, orders today, average order value, top-selling dishes, orders by status
 
 ---
 
-## 2. Backend setup (PHP + MongoDB)
+## Tech stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | Angular 18 (standalone components, signals), TypeScript |
+| Backend | PHP 8+ (plain REST API, no framework) |
+| Database | MongoDB (via `mongodb/mongodb` PHP library) |
+| Auth | JWT (`firebase/php-jwt`) |
+| Fonts | Playfair Display, Inter, Noto Nastaliq Urdu (Google Fonts) |
+
+No frontend framework dependencies beyond Angular itself — no UI kit, no CSS framework. Styling is hand-written CSS using a small set of design tokens (CSS custom properties) for easy re-theming.
+
+---
+
+## Project structure
+
+```
+shahi-angaar/
+├── frontend/                      Angular app
+│   ├── src/app/
+│   │   ├── components/            Shared UI: cart drawer, star rating, review modal, admin nav
+│   │   ├── guards/                Route guard for /admin
+│   │   ├── pages/                 home, menu, track-order, admin-login, admin-dashboard, admin-orders, admin-analytics
+│   │   ├── services/              menu, cart, auth, order, review, analytics
+│   │   ├── app.component.*        App shell: header, footer, cart drawer
+│   │   └── app.routes.ts
+│   └── package.json
+│
+├── backend/                       PHP REST API
+│   ├── public/
+│   │   ├── index.php              Front controller / router
+│   │   └── uploads/               Uploaded dish photos
+│   ├── src/
+│   │   ├── Controllers/           Menu, Auth, Upload, Review, Order, Analytics
+│   │   ├── Auth.php               JWT issue/verify
+│   │   └── Database.php           MongoDB connection
+│   ├── seed_data/menu.json        Starting menu (100+ dishes)
+│   ├── seed.php                   Creates admin user + imports the starting menu
+│   ├── composer.json
+│   └── .env.example
+│
+└── README.md
+```
+
+---
+
+## Getting started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org) 18+ and npm
+- [PHP](https://www.php.net/) 8.1+ with the **MongoDB extension** (`php-mongodb`)
+- [Composer](https://getcomposer.org/)
+- A MongoDB instance — either installed locally or a free [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cluster
+
+### 1. Backend setup
 
 ```bash
 cd backend
@@ -43,117 +90,43 @@ composer install
 cp .env.example .env
 ```
 
-Open `.env` and set:
-- `MONGODB_URI` — your local MongoDB URL (default is usually fine) or your Atlas connection string
-- `JWT_SECRET` — replace with any long random string (this signs admin login sessions)
-- `ADMIN_USERNAME` / `ADMIN_PASSWORD` — the admin account that `seed.php` will create
+Edit `.env`:
 
-Then load your starting menu (all 107 items) and create the admin account:
+| Variable | Description |
+|---|---|
+| `MONGODB_URI` | Your MongoDB connection string |
+| `MONGODB_DB` | Database name (default `shahi_angaar`) |
+| `JWT_SECRET` | Any long random string — signs admin login sessions |
+| `ADMIN_USERNAME` / `ADMIN_PASSWORD` | Admin account created by `seed.php` |
+| `CORS_ORIGIN` | The frontend's URL (default `http://localhost:4200`) |
+
+Load the starting menu and create the admin account:
 
 ```bash
 php seed.php
 ```
 
-Start the API (for local development):
+Start the API:
 
 ```bash
 php -S localhost:8000 -t public
 ```
 
-Your API is now running at `http://localhost:8000/api/menu`.
+The API is now live at `http://localhost:8000/api`.
 
-**Admin login credentials** (from `.env`, defaults shown — **change the password
-after your first login in a real deployment**):
-- Username: `admin`
-- Password: `Angaar@2026`
-
-> There's no "change password" screen yet — to change it, generate a new hash
-> with `php -r "echo password_hash('YourNewPassword', PASSWORD_BCRYPT);"` and
-> update the `passwordHash` field on the `admin` document in the `users`
-> collection (MongoDB Compass or `mongosh` works well for this).
-
-### Deploying the backend for real
-
-Any host that gives you PHP 8.1+ and lets you install Composer packages works
-(a VPS, or PHP-friendly shared hosting). Point your web server's document
-root at `backend/public`, upload `.env` (with production values), run
-`composer install` and `php seed.php` once on the server, and the API is live.
-Uploaded images are saved under `backend/public/uploads/`.
-
----
-
-## 3. Frontend setup (Angular)
+### 2. Frontend setup
 
 ```bash
 cd frontend
 npm install
-```
-
-Open `src/app/config.ts` and set `API_BASE_URL` to wherever your backend
-lives:
-- Local development: `http://localhost:8000/api` (already the default)
-- After deploying: `https://your-domain.com/api`
-
-Run it locally:
-
-```bash
 npm start
 ```
 
-This opens the site at `http://localhost:4200`. The homepage, `/menu`, and
-`/admin/login` → `/admin` (using the credentials above) should all work as
-long as the backend from step 2 is running.
+Open `http://localhost:4200`. If your backend isn't running on `localhost:8000`, update `API_BASE_URL` in `src/app/config.ts`.
 
-### Building for production
+Build for production:
 
 ```bash
 npm run build
 ```
 
-This outputs static files to `frontend/dist/frontend/browser`. Upload that
-folder's contents to any static host (Netlify, Vercel, a VPS, or the same
-server as the backend under a subfolder) — it's plain HTML/CSS/JS, no Node
-server required to serve it.
-
----
-
-## 4. Adding photos to menu items
-
-Real dish photos were intentionally left out of the starting data — scraping
-photos from the internet risks copyright issues, and there was no photo set
-to import. Once the admin panel is running:
-
-1. Log in at `/admin/login`
-2. Click **Edit** on any item (or **+ Add item** for a new one)
-3. Choose a photo under **Photo** and hit **Save**
-
-The image uploads to the backend and is stored under `backend/public/uploads/`;
-its path is saved on the menu item and shown automatically on the menu page.
-Items with no photo fall back to a category icon, so the menu never looks
-broken while you're adding photos gradually.
-
----
-
-## 5. What's included vs. what you'll still want to add
-
-**Included:** full menu CRUD, image upload, JWT-protected admin routes,
-WhatsApp checkout, all 107 starting menu items pre-loaded by `seed.php`,
-**menu search**, **star ratings & reviews** (customers rate/review any dish,
-no login needed), **order tracking** (an order is saved when a customer
-checks out, and they can look it up later by phone at `/track-order`), and
-an **admin analytics dashboard** (`/admin/analytics` — total orders, revenue,
-orders today, average order value, top-selling dishes, orders by status).
-
-No extra setup is needed for these — `reviews` and `orders` are new MongoDB
-collections that get created automatically the first time someone submits a
-review or places an order.
-
-**New pages/routes:**
-- `/track-order` — public, customer enters their phone number to see order status
-- `/admin/orders` — admin only, see every order and change its status (pending → preparing → ready → completed/cancelled)
-- `/admin/analytics` — admin only, sales dashboard
-
-**Not included (intentionally, to keep this deployable as-is):** online
-payments, customer accounts/login, multi-admin roles, and automated tests.
-If you want any of these next, they build cleanly on top of what's here —
-just ask.

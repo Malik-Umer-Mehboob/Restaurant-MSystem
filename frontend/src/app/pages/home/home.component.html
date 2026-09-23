@@ -93,3 +93,20 @@
     <div><b>Order on WhatsApp</b><span>No app, no hassle — just message us</span></div>
   </div>
 </section>
+<section class="testimonials">
+  <div class="t-head">
+    <h2>What our customers say</h2>
+    <p>A few words from people who've ordered from us.</p>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      @for (t of testimonials.concat(testimonials); track $index) {
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-quote">"{{ t.quote }}"</p>
+          <div class="t-name">{{ t.name }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

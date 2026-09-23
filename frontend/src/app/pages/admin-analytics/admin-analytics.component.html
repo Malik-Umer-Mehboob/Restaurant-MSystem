@@ -1,16 +1,17 @@
 <app-admin-nav></app-admin-nav>
 <div class="wrap">
   <h2>Analytics</h2>
+  <p class="sub">A quick look at how the restaurant is performing.</p>
 
   @if (loading()) {
     <p class="state">Loading…</p>
   } @else {
     @if (data(); as d) {
     <div class="stat-grid">
-      <div class="stat-card"><b>{{ d.totalOrders }}</b><span>Total orders</span></div>
-      <div class="stat-card"><b>Rs. {{ d.totalRevenue | number }}</b><span>Total revenue</span></div>
-      <div class="stat-card"><b>{{ d.todayOrders }}</b><span>Orders today</span></div>
-      <div class="stat-card"><b>Rs. {{ d.avgOrderValue | number }}</b><span>Avg. order value</span></div>
+      <div class="stat-card"><span class="stat-icon">🧾</span><div><b>{{ d.totalOrders }}</b><span>Total orders</span></div></div>
+      <div class="stat-card"><span class="stat-icon">💰</span><div><b>Rs. {{ d.totalRevenue | number }}</b><span>Total revenue</span></div></div>
+      <div class="stat-card"><span class="stat-icon">📅</span><div><b>{{ d.todayOrders }}</b><span>Orders today</span></div></div>
+      <div class="stat-card"><span class="stat-icon">📊</span><div><b>Rs. {{ d.avgOrderValue | number }}</b><span>Avg. order value</span></div></div>
     </div>
 
     <div class="panels">

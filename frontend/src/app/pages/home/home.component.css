@@ -49,3 +49,42 @@ h1 span{color:var(--ember);}
   .feature{border-right:none; border-bottom:1px solid var(--line);}
   .feature:last-child{border-bottom:none;}
 }
+/* ---------- Testimonials ---------- */
+.testimonials{padding:56px 0 64px; overflow:hidden;}
+.t-head{max-width:1180px; margin:0 auto; padding:0 20px 30px;}
+.t-head h2{font-family:var(--font-display); font-weight:800; font-size:clamp(1.8rem,3.4vw,2.4rem); color:var(--bone);}
+.t-head p{color:var(--bone-dim); margin-top:8px; font-weight:600;}
+
+.marquee{width:100%; overflow:hidden; mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);}
+.marquee-track{
+  display:flex; gap:18px; width:max-content;
+  animation:marquee-scroll 34s linear infinite;
+}
+.marquee:hover .marquee-track{animation-play-state:paused;}
+
+@keyframes marquee-scroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+.t-card{
+  flex:none; width:300px; background:var(--charcoal);
+  border-top:4px solid var(--ember); border-left:4px solid var(--ember);
+  border-radius:12px; padding:22px 22px 18px; box-shadow:0 8px 20px rgba(35,26,20,0.05);
+  display:flex; flex-direction:column;
+}
+.t-stars{color:var(--gold); font-size:0.9rem; letter-spacing:3px; margin-bottom:14px;}
+.t-quote{
+  color:var(--bone); font-size:0.95rem; font-style:italic; font-weight:500;
+  line-height:1.65; margin:0 0 18px; flex:1;
+}
+.t-name{
+  font-family:var(--font-head); font-weight:700; color:var(--ember);
+  font-size:0.86rem; letter-spacing:0.02em;
+  padding-top:12px; border-top:1px solid var(--line);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .marquee-track{animation:none;}
+  .marquee{overflow-x:auto;}
+}

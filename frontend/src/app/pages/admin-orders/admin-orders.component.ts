@@ -28,9 +28,18 @@ export class AdminOrdersComponent implements OnInit {
   }
 
   changeStatus(order: Order, status: string) {
-    if (!order._id) return;
-    this.orderService.updateStatus(order._id, status as Order['status']).subscribe({
-      next: () => this.refresh()
-    });
-  }
-}
+  if (!order._id) return;
+  const previousStatus = order.status;
+
+  this.orders.update(list =>
+    list.map(o => o._id === order._id ? { ...o, status: status as Order['status'] } : o)
+  );
+
+  this.orderService.updateStatus(order._id, status as Order['status']).subscribe({
+    error: () => {
+      this.orders.update(list =>
+        list.map(o => o._id === order._id ? { ...o, status: previousStatus } : o)
+      );
+    }
+  });
+}}

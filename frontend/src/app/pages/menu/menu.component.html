@@ -5,7 +5,7 @@
   <div class="search-wrap">
     <input
       type="text"
-      placeholder="Search dishes… e.g. Biryani, Karahi, Zinger"
+      placeholder="Search dishes…"
       [ngModel]="searchTerm()"
       (ngModelChange)="onSearch($event)">
     @if (searchTerm()) {
@@ -45,7 +45,7 @@
             <div class="card-top">
               <div class="card-id">
                 @if (item.image) {
-                  <img class="thumb" [src]="item.image" [alt]="item.name">
+                  <img class="thumb" [src]="imageUrl(item)" [alt]="item.name">
                 } @else {
                   <span class="icon-circle">{{ categoryIcon(item.category) }}</span>
                 }

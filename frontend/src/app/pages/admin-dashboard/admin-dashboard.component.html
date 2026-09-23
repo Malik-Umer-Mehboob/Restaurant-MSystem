@@ -1,7 +1,10 @@
 <app-admin-nav></app-admin-nav>
 <div class="admin">
   <div class="admin-head">
-    <h2>Menu admin</h2>
+    <div>
+      <h2>Menu admin</h2>
+      <p class="sub">Add, edit or remove dishes shown on the public menu.</p>
+    </div>
     <div class="actions">
       <button class="btn outline" (click)="openAddForm()">+ Add item</button>
     </div>
@@ -21,7 +24,7 @@
           @for (item of items(); track item._id) {
             <tr>
               <td>
-                @if (item.image) { <img [src]="item.image" class="thumb"> } @else { <span class="thumb placeholder">🍽️</span> }
+                @if (item.image) { <img [src]="imageUrl(item.image)" class="thumb"> } @else { <span class="thumb placeholder">🍽️</span> }
               </td>
               <td>
                 <div class="n">{{ item.name }}</div>
@@ -67,7 +70,7 @@
       <label>Photo (optional)</label>
       <input type="file" accept="image/*" (change)="onFileSelected($event)">
       @if (form.image && !selectedFile) {
-        <img [src]="form.image" class="preview">
+        <img [src]="imageUrl(form.image)" class="preview">
       }
 
       <div class="modal-actions">

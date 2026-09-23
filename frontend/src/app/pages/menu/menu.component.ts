@@ -6,6 +6,7 @@ import { CartService } from '../../services/cart.service';
 import { ReviewService, RatingSummary } from '../../services/review.service';
 import { StarRatingComponent } from '../../components/star-rating/star-rating.component';
 import { ReviewModalComponent } from '../../components/review-modal/review-modal.component';
+import { resolveImageUrl } from '../../config';
 
 @Component({
   selector: 'app-menu',
@@ -100,6 +101,9 @@ export class MenuComponent implements OnInit {
   qty(item: MenuItem): number {
     return item._id ? this.cart.qtyOf(item._id) : 0;
   }
+  imageUrl(item: MenuItem): string {
+  return resolveImageUrl(item.image);
+}
 
   ratingFor(item: MenuItem): RatingSummary {
     return (item._id && this.ratings()[item._id]) || { avg: 0, count: 0 };

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { MenuService, MenuItem } from '../../services/menu.service';
 import { AuthService } from '../../services/auth.service';
 import { AdminNavComponent } from '../../components/admin-nav/admin-nav.component';
+import { resolveImageUrl } from '../../config';
 
 const EMPTY_FORM: MenuItem = {
   name: '', urdu: '', category: '', description: '', price: 0, tags: [], image: ''
@@ -116,4 +117,7 @@ export class AdminDashboardComponent implements OnInit {
     this.auth.logout();
     this.router.navigate(['/admin/login']);
   }
+  imageUrl(path?: string | null): string {
+  return resolveImageUrl(path);
+}
 }

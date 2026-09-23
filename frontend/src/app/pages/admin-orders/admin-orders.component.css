@@ -1,12 +1,28 @@
-.wrap{max-width:1180px; margin:0 auto; padding:32px 20px 80px;}
-h2{color:var(--bone); font-size:1.5rem; margin-bottom:20px;}
+.wrap{max-width:1180px; margin:0 auto; padding:36px 20px 80px;}
+h2{font-family:var(--font-display); font-weight:800; font-size:clamp(1.8rem,3vw,2.3rem); color:var(--bone); margin-bottom:4px;}
+.sub{color:var(--bone-dim); font-size:0.9rem; font-weight:600; margin-bottom:22px;}
 .state{color:var(--bone-dim);}
-.table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:4px;}
-table{width:100%; border-collapse:collapse; min-width:760px;}
-th,td{padding:12px 14px; text-align:left; border-bottom:1px solid var(--line); font-size:0.86rem;}
-th{color:var(--gold); font-size:0.7rem; letter-spacing:0.04em; text-transform:uppercase;}
-td{color:var(--bone-dim);}
-select{
-  background:var(--charcoal); color:var(--bone); border:1px solid var(--line);
-  padding:6px 10px; border-radius:4px; font-size:0.82rem; text-transform:capitalize;
+
+.table-wrap{
+  overflow-x:auto; background:var(--charcoal); border:1px solid var(--line);
+  border-radius:12px; box-shadow:0 10px 30px rgba(35,26,20,0.06);
 }
+table{width:100%; border-collapse:collapse; min-width:760px;}
+th,td{padding:16px; text-align:left; border-bottom:1px solid var(--line); font-size:0.93rem; font-weight:700;}
+thead tr{background:rgba(122,31,43,0.04);}
+th{color:var(--gold); font-size:0.76rem; letter-spacing:0.05em; text-transform:uppercase; font-weight:700;}
+tbody tr{transition:background .12s ease;}
+tbody tr:hover{background:rgba(122,31,43,0.03);}
+tbody tr:last-child td{border-bottom:none;}
+td{color:var(--bone-dim);}
+
+.status-select{
+  border:1px solid var(--line); padding:7px 14px; border-radius:16px;
+  font-size:0.8rem; font-weight:700; text-transform:capitalize; cursor:pointer;
+  background:var(--ink); color:var(--bone-dim);
+}
+.status-select.pending{background:rgba(201,161,59,0.14); border-color:rgba(201,161,59,0.4); color:var(--gold);}
+.status-select.preparing{background:rgba(122,31,43,0.12); border-color:rgba(122,31,43,0.4); color:var(--ember);}
+.status-select.ready{background:rgba(90,180,120,0.14); border-color:rgba(90,180,120,0.4); color:#3f8a5c;}
+.status-select.completed{background:rgba(90,180,120,0.22); border-color:rgba(90,180,120,0.5); color:#2e6b41;}
+.status-select.cancelled{background:rgba(122,108,93,0.14); border-color:var(--line); color:var(--bone-dim);}

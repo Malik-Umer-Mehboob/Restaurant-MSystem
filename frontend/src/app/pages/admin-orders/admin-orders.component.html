@@ -1,6 +1,7 @@
 <app-admin-nav></app-admin-nav>
 <div class="wrap">
   <h2>Orders</h2>
+  <p class="sub">Track incoming orders and update their status.</p>
 
   @if (loading()) {
     <p class="state">Loading…</p>
@@ -23,9 +24,9 @@
                   {{ order.items.length }} item(s)
                 </span>
               </td>
-              <td>Rs. {{ order.total | number }}</td>
+              <td class="total-cell">Rs. {{ order.total | number }}</td>
               <td>
-                <select [value]="order.status" (change)="changeStatus(order, $any($event.target).value)">
+                <select class="status-select" [class]="order.status" [value]="order.status" (change)="changeStatus(order, $any($event.target).value)">
                   @for (s of statuses; track s) {
                     <option [value]="s">{{ s }}</option>
                   }
